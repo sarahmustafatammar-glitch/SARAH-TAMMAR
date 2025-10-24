@@ -219,7 +219,7 @@
   © 2025 — Designed & Created by Sarah Mustafa Tammar 💗  
   <div class="signature">Keep learning, keep shining 💗 — Sarah Tammar ✨</div>
 </footer>
-  <!-- 🎓 قسم الشهادات -->
+ <!-- 🎓 قسم الشهادات -->
 <section id="certs" style="text-align:center; margin-top:40px;">
   <h2>شهاداتي 💗</h2>
   <img src="images/english_level1.jpg" alt="شهادة 1">
@@ -227,7 +227,7 @@
   <img src="images/school01.jpg" alt="شهادة 3">
 </section>
 
-<!-- نافذة التكبير -->
+<!-- 🌷 نافذة التكبير بخلفية بيبي بينك -->
 <div id="popup" style="
   display:none;
   justify-content:center;
@@ -235,19 +235,23 @@
   position:fixed;
   top:0; left:0;
   width:100%; height:100%;
-  background:rgba(0,0,0,0.8);
+  background:rgba(255,192,203,0.6); /* بيبي بينك شفاف */
+  backdrop-filter:blur(6px);
   z-index:1000;">
+  
   <span id="closeBtn" style="
     position:absolute;
-    top:30px; right:40px;
-    color:white;
-    font-size:40px;
+    top:25px; right:40px;
+    color:#ff3b83; /* فوشي */
+    font-size:45px;
+    font-weight:bold;
     cursor:pointer;">&times;</span>
+  
   <img id="popupImg" style="
-    max-width:90%;
+    max-width:80%;
     max-height:85%;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(255,255,255,0.3);">
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(255,105,180,0.4);">
 </div>
 
 <script>
@@ -255,6 +259,7 @@
   const popupImg = document.getElementById("popupImg");
   const closeBtn = document.getElementById("closeBtn");
 
+  // لما تضغطين على الشهادة
   document.querySelectorAll("#certs img").forEach(img => {
     img.addEventListener("click", () => {
       popup.style.display = "flex";
@@ -262,6 +267,7 @@
     });
   });
 
+  // لما تضغطين على × أو برا الصورة
   closeBtn.onclick = () => popup.style.display = "none";
   popup.onclick = (e) => {
     if (e.target === popup) popup.style.display = "none";
@@ -271,13 +277,15 @@
 <style>
   #certs img {
     width: 160px;
-    margin: 8px;
-    border-radius: 10px;
+    margin: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
   #certs img:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255,182,193,0.6); /* وردي ناعم */
   }
 </style>
 
