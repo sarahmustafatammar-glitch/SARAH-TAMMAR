@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7c6d9">
+  <title>📅 جدولي الدراسي — Sarah Tammar</title>
+  <style>
+    :root{
+      --bg:#fff7fb;
+      --panel:#ffffff;
+      --text:#251f2f;
+      --border:#f1d9e5;
+      --accent:#fce7f3;
+      --pink:#f4a6c1;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Poppins","Noto Sans Arabic",sans-serif;background:var(--bg);color:var(--text)}
+    header{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:20}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;}
+    .nav-links{display:flex;gap:12px;flex-wrap:wrap}
+    .nav-links a{padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--text);}
+    .nav-links a.active{background:var(--accent);border:1px solid var(--border)}
+    .container{max-width:1150px;margin:auto;padding:24px}
+    h2{text-align:center;font-size:24px;margin-top:0;color:#4b2c40}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:18px;margin-top:10px;overflow-x:auto;box-shadow:0 6px 20px rgba(244,166,193,.25);}
+    table{width:100%;border-collapse:collapse;text-align:center;min-width:950px;}
+    th,td{border:1px solid var(--border);padding:10px;font-size:15px;}
+    thead th{background:linear-gradient(90deg,#ffe6ef,#fce7f3);font-weight:600;color:#4b2c40;}
+    tbody tr:nth-child(even){background:#fff9fc;}
+    tbody tr:hover{background:#fff2f8;}
+    .day{background:#fdddea;font-weight:bold;}
+    .break{background:#fdebf2;color:#d63384;font-weight:bold;}
+    .enrich{color:#c2187a;font-weight:bold;}
+    .btn{
+      background:var(--pink);color:white;border:none;
+      padding:12px 28px;border-radius:999px;cursor:pointer;
+      font-size:16px;box-shadow:0 4px 10px rgba(244,166,193,.4);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover{transform:scale(1.05);box-shadow:0 6px 20px rgba(244,166,193,.6);}
+    footer{text-align:center;color:#777;border-top:1px solid var(--border);margin-top:30px;padding:20px;}
+    .signature{color:#e78bb6;margin-top:6px;}
+  </style>
+</head>
+
+<body data-subject="schedule">
+  <header>
+    <nav class="container">
+      <strong>🌸 Sarah Tammar</strong>
+      <div class="nav-links">
+        <a href="index.html">🏠 الرئيسية</a>
+        <a href="subjects.html">📚 المواد</a>
+        <a href="schedule.html" class="active">📅 جدولي</a>
+        <a href="#contact">💌 تواصل</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>📅 جدولي الدراسي — القاعة 101</h2>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>اليوم</th>
+            <th>1️⃣</th>
+            <th>2️⃣</th>
+            <th>3️⃣</th>
+            <th>4️⃣</th>
+            <th>🥤 Break1</th>
+            <th>5️⃣</th>
+            <th>6️⃣</th>
+            <th>7️⃣</th>
+            <th>🥪 Break2</th>
+            <th>8️⃣</th>
+            <th>9️⃣</th>
+            <th>🔟</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="day">الأحد</td>
+            <td>لغة إنجليزية</td>
+            <td>القرآن الكريم وتفسيره</td>
+            <td>كفايات لغوية</td>
+            <td>رياضيات</td>
+            <td class="break">Break1</td>
+            <td>أحياء</td>
+            <td>تربية بدنية وصحية</td>
+            <td>تقنية رقمية</td>
+            <td class="break">Break2</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+          </tr>
+
+          <tr>
+            <td class="day">الإثنين</td>
+            <td>القرآن الكريم وتفسيره</td>
+            <td>رياضيات</td>
+            <td>كيمياء</td>
+            <td>تقنية رقمية</td>
+            <td class="break">Break1</td>
+            <td>لغة إنجليزية</td>
+            <td>تفكير ناقد</td>
+            <td>كفايات لغوية</td>
+            <td class="break">Break2</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+          </tr>
+
+          <tr>
+            <td class="day">الثلاثاء</td>
+            <td>رياضيات</td>
+            <td>تفكير ناقد</td>
+            <td>لغة إنجليزية</td>
+            <td>تقنية رقمية</td>
+            <td class="break">Break1</td>
+            <td>كيمياء</td>
+            <td>كفايات لغوية</td>
+            <td>القرآن الكريم وتفسيره</td>
+            <td class="break">Break2</td>
+            <td class="enrich">البرنامج الإثرائي العام</td>
+            <td class="enrich">البرنامج الإثرائي العام</td>
+            <td class="enrich">البرنامج الإثرائي العام</td>
+          </tr>
+
+          <tr>
+            <td class="day">الأربعاء</td>
+            <td>لغة إنجليزية</td>
+            <td>رياضيات</td>
+            <td>القرآن الكريم وتفسيره</td>
+            <td>أحياء</td>
+            <td class="break">Break1</td>
+            <td>تفكير ناقد</td>
+            <td>كيمياء</td>
+            <td>كفايات لغوية</td>
+            <td class="break">Break2</td>
+            <td>تربية بدنية وصحية</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+          </tr>
+
+          <tr>
+            <td class="day">الخميس</td>
+            <td>رياضيات</td>
+            <td>كيمياء</td>
+            <td>كفايات لغوية</td>
+            <td>أحياء</td>
+            <td class="break">Break1</td>
+            <td>تربية بدنية وصحية</td>
+            <td>لغة إنجليزية</td>
+            <td>—</td>
+            <td class="break">Break2</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+            <td class="enrich">البرنامج الإثرائي التقني</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="text-align:center;margin-top:25px;">
+      <button class="btn" onclick="openPDF('pdfs/schedule.pdf')">📄 عرض الجدول بصيغة PDF</button>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 — تصميم وإنجاز سارة مصطفى تمّار 💗  
+    <div class="signature">Keep learning, keep shining 💗 — Sarah Tammar ✨</div>
+  </footer>
+
+  <script>
+    function openPDF(src){
+      const overlay=document.createElement('div');
+      overlay.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:999;";
+      const box=document.createElement('div');
+      box.style.cssText="background:#fff;border-radius:16px;overflow:hidden;width:min(900px,95vw);height:min(85vh,90vh);position:relative;";
+      const close=document.createElement('button');
+      close.textContent="✕";
+      close.style.cssText="position:absolute;top:8px;inset-inline-end:8px;border:none;background:#fce7f3;color:#251f2f;border-radius:999px;padding:6px 10px;cursor:pointer";
+      close.onclick=()=>document.body.removeChild(overlay);
+      const iframe=document.createElement('iframe');
+      iframe.src=src;
+      iframe.style.cssText="width:100%;height:100%;border:0";
+      box.append(close,iframe);
+      overlay.appendChild(box);
+      document.body.appendChild(overlay);
+    }
+  </script>
+</body>
+</html>

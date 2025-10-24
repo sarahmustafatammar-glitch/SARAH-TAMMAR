@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7c6d9">
+  <title>Sarah Tammar — MyPortfolio</title>
+  <style>
+    :root{
+      --bg:#fff7fb;
+      --panel:#ffffff;
+      --text:#251f2f;
+      --muted:#6b7280;
+      --brand:#f4a6c1;
+      --accent:#fce7f3;
+      --border:#f1d9e5;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Poppins",sans-serif;background:var(--bg);color:var(--text)}
+    a{color:#8b5cf6;text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);z-index:20}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;}
+    .nav-links{display:flex;gap:12px;flex-wrap:wrap}
+    .nav-links a{padding:8px 12px;border-radius:999px;}
+    .nav-links a.active{background:var(--accent);border:1px solid var(--border)}
+    .container{max-width:1100px;margin:auto;padding:24px}
+    .hero{
+      background:linear-gradient(135deg,#ffe6ef,#fff);
+      border-radius:24px;border:1px solid var(--border);
+      padding:24px;display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center;
+      box-shadow:0 6px 20px rgba(244,166,193,.25);
+    }
+    .pfp{
+      width:240px;
+      aspect-ratio:1/1;
+      border-radius:50%;
+      border:6px solid #fff;
+      outline:3px solid var(--brand);
+      box-shadow:0 10px 30px rgba(244,166,193,.35);
+      object-fit:cover;
+      object-position:center 18%;
+      justify-self:center;
+    }
+    h1{margin:4px 0;font-size:30px}
+    h2{margin-top:40px;font-size:24px}
+    p{line-height:1.7}
+    .card{background:var(--panel);border:1px solid var(--border);
+      border-radius:20px;padding:18px;margin-top:10px;}
+    .scroll-gallery{
+      display:flex;gap:14px;overflow-x:auto;scrollbar-width:none;
+      padding:10px 4px;
+    }
+    .scroll-gallery::-webkit-scrollbar{display:none;}
+    .scroll-gallery img{
+      width:220px;height:150px;object-fit:cover;border-radius:12px;
+      border:1px solid var(--border);cursor:pointer;
+      box-shadow:0 4px 10px rgba(255,182,193,.4);
+      transition:transform .3s ease,box-shadow .3s ease;
+    }
+    .scroll-gallery img:hover{
+      transform:scale(1.07);
+      box-shadow:0 6px 20px rgba(255,105,180,.6);
+    }
+    table{width:100%;border-collapse:collapse;text-align:center;margin-top:20px}
+    th,td{border:1px solid var(--border);padding:10px;font-size:15px;}
+    thead th{background:#ffe6ef;font-weight:600;color:#4b2c40;}
+    tbody tr:nth-child(even){background:#fff9fc;}
+    tbody tr:hover{background:#fff2f8;}
+    .day{background:#fdddea;font-weight:bold;}
+    .break{background:#fdebf2;color:#d63384;font-weight:bold;}
+    .enrich{color:#c2187a;font-weight:bold;}
+    footer{border-top:1px solid var(--border);margin-top:30px;padding:20px;text-align:center;color:#777}
+    .signature{margin-top:6px;font-style:italic;color:#e78bb6;}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="container">
+    <strong>🌸 Sarah Tammar</strong>
+    <div class="nav-links">
+      <a href="#home" class="active">🏠 Home</a>
+      <a href="#about">💖 About</a>
+      <a href="#certs">📜 Certificates</a>
+      <a href="#skills">💡 Skills</a>
+      <a href="subjects.html">📚 Subjects</a>
+      <a href="#schedule">📅 Schedule</a>
+      <a href="#contact">💌 Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+ <section id="home" class="hero">
+  <div>
+    <h1>Sarah Mustafa Tammar</h1>
+    <p>15 years old · Dammam · Talented Technical High School</p>
+    <p>I’m a passionate student who loves learning, English, and programming.  
+    Always aiming high — creative, ambitious, and confident ✨</p>
+  </div>
+  <img class="pfp" src="images/sarah1.jpg" alt="Sarah Tammar photo">
+</section>
+
+
+  <section id="about">
+    <h2>💖 About Me</h2>
+    <div class="card">
+      <p>Hi, I'm <strong>Sarah Mustafa Tammar</strong> — a Saudi student from Dammam 🇸🇦.  
+      I’m passionate about design, coding, and science.  
+      My dream is to earn a patent and join MIT to innovate for the future 💡.</p>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>📜 My Certificates</h2>
+
+    <h3>💬 Direct English Certificates</h3>
+    <div class="card scroll-gallery">
+      <img src="images/english_foundation.jpg" alt="English Foundation Certificate">
+      <img src="images/english_level1.jpg" alt="English Level 1 Certificate">
+      <img src="images/english_level4.jpg" alt="English Level 4 Certificate">
+    </div>
+
+    <h3>🏫 School Certificates</h3>
+    <div class="card scroll-gallery">
+      <img src="images/school1.jpg" alt="School Certificate 1">
+      <img src="images/school2.jpg" alt="School Certificate 2">
+      <img src="images/school3.jpg" alt="School Certificate 3">
+      <img src="images/school4.jpg" alt="School Certificate 4">
+      <img src="images/school5.jpg" alt="School Certificate 5">
+      <img src="images/school6.jpg" alt="School Certificate 6">
+      <img src="images/school7.jpg" alt="School Certificate 7">
+      <img src="images/school8.jpg" alt="School Certificate 8">
+      <img src="images/school9.jpg" alt="School Certificate 9">
+      <img src="images/school10.jpg" alt="School Certificate 10">
+      <img src="images/school11.jpg" alt="School Certificate 11">
+      <img src="images/school12.jpg" alt="School Certificate 12">
+      <img src="images/school13.jpg" alt="School Certificate 13">
+      <img src="images/school14.jpg" alt="School Certificate 14">
+      <img src="images/school15.jpg" alt="School Certificate 15">
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>💡 My Skills</h2>
+    <div class="card">
+      <p>💬 English Communication · 95%</p>
+      <p>🎨 Creativity · 90%</p>
+      <p>💻 Programming · 92%</p>
+      <p>🧠 Problem Solving · 88%</p>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <h2>📅 My Class Schedule</h2>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>1️⃣</th><th>2️⃣</th><th>3️⃣</th><th>4️⃣</th><th>🥤 Break1</th>
+            <th>5️⃣</th><th>6️⃣</th><th>7️⃣</th><th>🥪 Break2</th>
+            <th>8️⃣</th><th>9️⃣</th><th>🔟</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="day">Sunday</td>
+            <td>English</td><td>Quran</td><td>Language</td><td>Math</td>
+            <td class="break">Break1</td><td>Biology</td><td>PE</td><td>Digital</td>
+            <td class="break">Break2</td>
+            <td class="enrich">Enrichment</td><td class="enrich">Enrichment</td><td class="enrich">Enrichment</td>
+          </tr>
+          <tr>
+            <td class="day">Monday</td>
+            <td>Quran</td><td>Math</td><td>Chemistry</td><td>Digital</td>
+            <td class="break">Break1</td><td>English</td><td>Critical</td><td>Language</td>
+            <td class="break">Break2</td>
+            <td class="enrich">Enrichment</td><td class="enrich">Enrichment</td><td class="enrich">Enrichment</td>
+          </tr>
+          <tr>
+            <td class="day">Tuesday</td>
+            <td>Math</td><td>Critical</td><td>English</td><td>Digital</td>
+            <td class="break">Break1</td><td>Chemistry</td><td>Language</td><td>Quran</td>
+            <td class="break">Break2</td>
+            <td class="enrich">General</td><td class="enrich">General</td><td class="enrich">General</td>
+          </tr>
+          <tr>
+            <td class="day">Wednesday</td>
+            <td>English</td><td>Math</td><td>Quran</td><td>Biology</td>
+            <td class="break">Break1</td><td>Critical</td><td>Chemistry</td><td>Language</td>
+            <td class="break">Break2</td>
+            <td>PE</td><td class="enrich">Enrichment</td><td class="enrich">Enrichment</td>
+          </tr>
+          <tr>
+            <td class="day">Thursday</td>
+            <td>Math</td><td>Chemistry</td><td>Language</td><td>Biology</td>
+            <td class="break">Break1</td><td>PE</td><td>English</td><td>—</td>
+            <td class="break">Break2</td>
+            <td class="enrich">Enrichment</td><td class="enrich">Enrichment</td><td class="enrich">Enrichment</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>💌 Contact Me</h2>
+    <div class="contact-box">
+      <div class="contact-tile">📞 <strong>Phone:</strong> <a href="tel:+966545546070">+966 54 554 6070</a></div>
+      <div class="contact-tile">📧 <strong>Email:</strong> <a href="mailto:Sarahtammar2010@outlook.com">Sarahtammar2010@outlook.com</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 — Designed & Created by Sarah Mustafa Tammar 💗  
+  <div class="signature">Keep learning, keep shining 💗 — Sarah Tammar ✨</div>
+</footer>
+</body>
+</html>

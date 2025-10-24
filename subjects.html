@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7c6d9">
+  <title>📚 المواد - سارة تمّار</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    body{
+      font-family:"Poppins","Noto Sans Arabic",sans-serif;
+      background:#fff7fb;color:#251f2f;margin:0;text-align:center;
+    }
+    header{position:sticky;top:0;background:#ffffffcc;
+      backdrop-filter:blur(10px);border-bottom:1px solid #f1d9e5;z-index:20;}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;}
+    .nav-links{display:flex;gap:12px;flex-wrap:wrap}
+    .nav-links a{padding:8px 12px;border-radius:999px;text-decoration:none;color:#2b1d33}
+    .nav-links a.active{background:#fce7f3;border:1px solid #f1d9e5}
+    .container{max-width:1100px;margin:auto;padding:24px;}
+    h1{color:#e26ca2;margin-bottom:30px;}
+    .subjects-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:20px;
+    }
+    .subject-card{
+      background:#fff;border:1px solid #f1d9e5;border-radius:20px;
+      padding:20px;transition:transform .3s,box-shadow .3s;
+      box-shadow:0 5px 15px rgba(244,166,193,.25);
+      cursor:pointer;position:relative;overflow:hidden;
+    }
+    .subject-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 10px 25px rgba(244,166,193,.35);
+    }
+    .subject-card::before{
+      content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+      background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(244,166,193,0.15));
+      opacity:0;transition:opacity .3s;
+    }
+    .subject-card:hover::before{opacity:1;}
+    .subject-icon{font-size:38px;margin-bottom:10px;}
+    footer{border-top:1px solid #f1d9e5;margin-top:40px;padding:20px;color:#777;}
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <strong>🌸 Sarah Tammar</strong>
+    <div class="nav-links">
+      <a href="index.html">🏠 الرئيسية</a>
+      <a href="subjects.html" class="active">📚 المواد</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>📚 المواد الدراسية</h1>
+  <div class="subjects-grid">
+
+    <div class="subject-card" onclick="openSubject('math.html')">
+      <div class="subject-icon">📘</div>
+      <h3>الرياضيات</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('digital.html')">
+      <div class="subject-icon">💻</div>
+      <h3>التقنية الرقمية</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('biology.html')">
+      <div class="subject-icon">🌿</div>
+      <h3>الأحياء</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('chemistry.html')">
+      <div class="subject-icon">⚗️</div>
+      <h3>الكيمياء</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('physics.html')">
+      <div class="subject-icon">🔬</div>
+      <h3>الفيزياء</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('islamic.html')">
+      <div class="subject-icon">🕌</div>
+      <h3>التربية الإسلامية</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('social.html')">
+      <div class="subject-icon">🌍</div>
+      <h3>الاجتماعيات</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('critical.html')">
+      <div class="subject-icon">🧠</div>
+      <h3>التفكير الناقد</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('pe.html')">
+      <div class="subject-icon">⚽</div>
+      <h3>التربية البدنية</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('english.html')">
+      <div class="subject-icon">📙</div>
+      <h3>اللغة الإنجليزية</h3>
+    </div>
+
+    <div class="subject-card" onclick="openSubject('environment.html')">
+      <div class="subject-icon">🌱</div>
+      <h3>علم البيئة</h3>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 — تصميم وإنجاز <strong>سارة مصطفى تمّار 💗</strong></p>
+</footer>
+
+<script>
+function openSubject(page){
+  window.location.href = page;
+}
+</script>
+
+</body>
+</html>

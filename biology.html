@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7c6d9">
+  <title>🌿 مادة الأحياء - سارة تمّار</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    body{font-family:"Poppins","Noto Sans Arabic",sans-serif;background:#fff7fb;color:#251f2f;margin:0;text-align:center;}
+    header{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(10px);border-bottom:1px solid #f1d9e5;z-index:20;}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;}
+    .nav-links{display:flex;gap:12px;flex-wrap:wrap}
+    .nav-links a{padding:8px 12px;border-radius:999px;text-decoration:none;color:#2b1d33}
+    .nav-links a.active{background:#fce7f3;border:1px solid #f1d9e5}
+    .container{max-width:1100px;margin:auto;padding:24px;}
+    h1{color:#e26ca2;}
+    .section-box{background:#fff;border:1px solid #f1d9e5;border-radius:20px;padding:20px;margin:20px auto;box-shadow:0 6px 15px rgba(0,0,0,0.05);}
+    button{background:#f4a6c1;color:#fff;border:none;padding:10px 22px;border-radius:25px;cursor:pointer;transition:0.3s;font-size:15px;}
+    button:hover{background:#f56fa8;}
+    .scroll-gallery{display:flex;gap:14px;overflow-x:auto;scrollbar-width:none;padding:10px 0;}
+    .scroll-gallery::-webkit-scrollbar{display:none;}
+    .scroll-gallery img{width:220px;height:150px;object-fit:cover;border-radius:14px;cursor:pointer;border:2px solid #f1d9e5;box-shadow:0 5px 12px rgba(244,166,193,0.3);transition:transform 0.3s, box-shadow 0.3s;}
+    .scroll-gallery img:hover{transform:scale(1.07);box-shadow:0 0 20px rgba(255,182,193,0.7);}
+    footer{border-top:1px solid #f1d9e5;margin-top:30px;padding:20px;color:#777;}
+    /* popup */
+    .popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:100;}
+    .popup-content{background:#fff;border-radius:18px;padding:15px;max-width:700px;width:90%;box-shadow:0 0 25px rgba(0,0,0,0.3);}
+    .popup-content iframe{width:100%;height:430px;border:none;border-radius:10px;}
+    .close-btn{background:#f04c86;color:#fff;border:none;border-radius:50%;width:35px;height:35px;font-weight:bold;cursor:pointer;float:left;}
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="container">
+    <strong>🌸 Sarah Tammar</strong>
+    <div class="nav-links">
+      <a href="index.html">🏠 الرئيسية</a>
+      <a href="subjects.html" class="active">📚 المواد</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>🌿 مادة الأحياء</h1>
+
+  <!-- القسم الأول: الكتاب -->
+  <div class="section-box">
+    <h2>📖 الكتاب</h2>
+    <p>يمكنك عرض أو تحميل كتاب الأحياء:</p>
+    <button onclick="openPopup('pdfs/bio_book.pdf')">عرض الكتاب</button>
+  </div>
+
+  <!-- القسم الثاني: المهمات -->
+  <div class="section-box">
+    <h2>📂 المهمّات</h2>
+    <p>✨ اضغطي على أي مهمة لعرضها:</p>
+    <div class="scroll-gallery">
+      <img src="images/bio_task1.jpg" alt="مهمة 1" onclick="openPopup('pdfs/bio_task1.pdf')">
+      <img src="images/bio_task2.jpg" alt="مهمة 2" onclick="openPopup('pdfs/bio_task2.pdf')">
+      <img src="images/bio_task3.jpg" alt="مهمة 3" onclick="openPopup('pdfs/bio_task3.pdf')">
+    </div>
+  </div>
+
+  <!-- القسم الثالث: الخطة -->
+  <div class="section-box">
+    <h2>🗓️ الخطة الدراسية</h2>
+    <p>يمكنك مشاهدة خطة مادة الأحياء:</p>
+    <button onclick="openPopup('pdfs/bio_plan.pdf')">عرض الخطة</button>
+  </div>
+
+  <a href="subjects.html" style="display:inline-block;margin:20px;padding:10px 18px;background:#f4a6c1;color:#fff;border-radius:20px;text-decoration:none;">⬅️ الرجوع للمواد</a>
+</main>
+
+<!-- popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <iframe id="popupFrame"></iframe>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 — تصميم وإنجاز <strong>سارة مصطفى تمّار 💗</strong></p>
+</footer>
+
+<script>
+function openPopup(file){
+  document.getElementById('popup').style.display='flex';
+  document.getElementById('popupFrame').src=file;
+}
+function closePopup(){
+  document.getElementById('popup').style.display='none';
+  document.getElementById('popupFrame').src='';
+}
+</script>
+
+</body>
+</html>
